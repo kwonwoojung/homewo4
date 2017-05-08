@@ -1,0 +1,8 @@
+<h1>로그인하기</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+<%= flash[:alert] %>
+<%= form_tag sessions_path do %>
+ email:<%= email_field_tag :email %><br>
+ password<%= password_field_tag :password %><br>
+ <%= submit_tag '로그인하기' %>
+<% end %>

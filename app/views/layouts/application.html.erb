@@ -8,6 +8,17 @@
 </head>
 <body>
 
+<br>
+
+  <% if current_user %>
+  <%= current_user.email %>님환영합니다
+  <%= link_to '로그아웃하기', session_path(current_user.id), method: :delete%>
+
+  <% else %>
+  <%= link_to '회원가입하기', new_user_path %>|
+  <%= link_to  '로그인하기', new_session_path %>
+  <% end %>
+
 <%= yield %>
 
 </body>
