@@ -2,7 +2,7 @@
 <p>Find me in app/views/sessions/new.html.erb</p>
 <%= flash[:alert] %>
 <%= form_tag sessions_path do %>
- email:<%= email_field_tag :email %><br>
+ email:<%= text_field_tag :email, nil, placeholder: '이메일 혹은 닉네임을 입력하세요' %><br>
  password<%= password_field_tag :password %><br>
  <%= submit_tag '로그인하기' %>
 <% end %>

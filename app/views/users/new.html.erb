@@ -4,9 +4,13 @@
 <%= form_for @user do |f|%> 
      email 
      <%=f.email_field :email, value: params[:email] %><br> 
+     닉네임
+     <%=f.text_field :nickname %><br>
      password 
      <%=f.password_field :password %><br> 
      password confirm 
      <%=f.password_field :password_confirmation%><br> 
+     성별<%=f.select :gender, options_for_select(['male','female'])%><br>
+     이름<%=f.text_field :full_name%><br>
      <%=f.submit '회원가입하기'%><br> 
  <%end%> 
